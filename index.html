@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>折り紙ARテスト - 3D図形</title>
+    <title>折り紙AR - 自然の背景</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
@@ -10,18 +10,34 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       
+      <a-assets>
+        <img id="blue-sky" src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg">
+      </a-assets>
+
       <a-marker type="pattern" url="tsuru.patt">
         
-        <a-box 
-          position="0 0.5 0" 
-          material="color: blue;" 
-          width="1" height="1" depth="1">
-        </a-box>
+        <a-plane 
+          src="#blue-sky" 
+          position="0 1 -2" 
+          rotation="0 0 0" 
+          width="6" height="4"
+          material="transparent: true; opacity: 0.9">
+        </a-plane>
+
+        <a-entity position="0 2 -1">
+          <a-sphere color="white" radius="0.05"
+            animation="property: position; from: -2 0.5 -0.5; to: 2 1 -0.5; dur: 4000; loop: true; easing: linear">
+          </a-sphere>
+          <a-sphere color="white" radius="0.05"
+            animation="property: position; from: 2 0.8 -1; to: -2 1.2 -1; dur: 5000; loop: true; easing: linear; delay: 500">
+          </a-sphere>
+        </a-entity>
+
+        <a-circle color="#7cfc00" rotation="-90 0 0" radius="1.5" opacity="0.6"></a-circle>
 
       </a-marker>
 
       <a-entity camera></a-entity>
-      
     </a-scene>
   </body>
 </html>
