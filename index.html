@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>環境問題AR：自然 vs 汚染</title>
+    <title>environmentAR：nature vs pollution</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
@@ -11,39 +11,39 @@
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
       <a-marker type="pattern" url="tsuru.patt">
-        <a-plane position="0 1.5 -5" width="15" height="10" color="#87CEEB" rotation="0 0 0"></a-plane>
+        <a-plane position="0 -2 -12" width="30" height="18" color="#87CEEB" rotation="-20 0 0"></a-plane>
         
-        <a-sphere position="2.5 3.5 -3.5" radius="0.4" color="#FFD700"
+        <a-sphere position="4 6 -10" radius="0.8" color="#FFD700"
                   material="emissive: #FFA500; emissiveIntensity: 1"></a-sphere>
 
-        <a-entity position="-1.5 2.5 -3" 
-                  animation="property: position; from: -1.8 2.5 -3; to: -1.2 2.6 -3; dur: 5000; dir: alternate; loop: true; easing: easeInOutSine">
-          <a-sphere position="0 0 0" radius="0.3" color="white" opacity="0.9"></a-sphere>
-          <a-sphere position="0.3 0.1 0" radius="0.25" color="white" opacity="0.9"></a-sphere>
-          <a-sphere position="-0.3 0 0" radius="0.2" color="white" opacity="0.9"></a-sphere>
+        <a-entity position="-3 4 -8" 
+                  animation="property: position; from: -3.5 4 -8; to: -2.5 4.2 -8; dur: 5000; dir: alternate; loop: true; easing: easeInOutSine">
+          <a-sphere position="0 0 0" radius="0.6" color="white" opacity="0.9"></a-sphere>
+          <a-sphere position="0.5 0.2 0" radius="0.5" color="white" opacity="0.9"></a-sphere>
+          <a-sphere position="-0.5 0 0" radius="0.4" color="white" opacity="0.9"></a-sphere>
         </a-entity>
 
-        <a-entity position="0 2 -2.5"
-                  animation="property: position; from: 4 0 0; to: -6 1 0; dur: 12000; loop: true; easing: linear">
-            <a-text value="V V V" color="#333" align="center" width="5"></a-text>
+        <a-entity position="0 3 -6"
+                  animation="property: position; from: 6 0 0; to: -8 2 0; dur: 12000; loop: true; easing: linear">
+            <a-text value="V V V" color="#333" align="center" width="8"></a-text>
         </a-entity>
       </a-marker>
 
       <a-marker type="pattern" url="air.patt">
-        <a-plane position="0 1.5 -5" width="15" height="10" color="#4B3621" rotation="0 0 0"></a-plane>
+        <a-plane position="0 -2 -12" width="30" height="18" color="#4B3621" rotation="-20 0 0"></a-plane>
         
-        <a-sphere position="2.5 3.5 -3.5" radius="0.4" color="#666"
+        <a-sphere position="4 6 -10" radius="0.8" color="#666"
                   material="emissive: #333; emissiveIntensity: 0.2"></a-sphere>
 
-        <a-entity position="0 1 -3" 
+        <a-entity position="0 0 -7" 
                   animation="property: scale; from: 1 1 1; to: 1.5 1.5 1.5; dur: 2000; dir: alternate; loop: true">
-          <a-sphere position="0 0.5 0" radius="0.6" color="#222" opacity="0.8"></a-sphere>
-          <a-sphere position="0.5 1.2 0" radius="0.5" color="#444" opacity="0.8"></a-sphere>
-          <a-sphere position="-0.4 1.8 0" radius="0.7" color="#111" opacity="0.8"></a-sphere>
+          <a-sphere position="0 1 0" radius="1.2" color="#222" opacity="0.8"></a-sphere>
+          <a-sphere position="1 2 0" radius="1.0" color="#444" opacity="0.8"></a-sphere>
+          <a-sphere position="-0.8 3 0" radius="1.4" color="#111" opacity="0.8"></a-sphere>
         </a-entity>
 
-        <a-text value="POLLUTION" color="red" position="0 3 -2" align="center" width="6"
-                animation="property: opacity; from: 1; to: 0; dur: 500; loop: true; dir: alternate"></a-animation>
+        <a-text value="POLLUTION" color="red" position="0 4 -5" align="center" width="10"
+                animation="property: opacity; from: 1; to: 0; dur: 500; loop: true; dir: alternate"></a-text>
       </a-marker>
 
       <a-entity camera></a-entity>
